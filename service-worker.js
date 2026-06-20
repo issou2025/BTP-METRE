@@ -1,4 +1,4 @@
-const CACHE_NAME = "metre-btp-niger-v4";
+const CACHE_NAME = "metre-btp-niger-v5";
 const ASSETS = [
   "./",
   "./index.html",
