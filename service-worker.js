@@ -1,4 +1,4 @@
-const CACHE_NAME = "metre-btp-niger-v6";
+const CACHE_NAME = "metre-btp-niger-v7";
 const ASSETS = [
   "./",
   "./index.html",
@@ -34,6 +34,14 @@ const ASSETS = [
   "./assets/js/electricite.js",
   "./assets/js/plomberie.js",
   "./assets/js/menuiserie.js",
+  "./assets/js/coffrage.js",
+  "./assets/js/pavage.js",
+  "./assets/js/caniveau.js",
+  "./assets/js/puisard.js",
+  "./assets/js/regard.js",
+  "./assets/js/joint-carrelage.js",
+  "./assets/js/terrasse.js",
+  "./assets/js/remblai.js",
   "./pages/beton.html",
   "./pages/maconnerie.html",
   "./pages/enduit.html",
@@ -56,6 +64,14 @@ const ASSETS = [
   "./pages/electricite.html",
   "./pages/plomberie.html",
   "./pages/menuiserie.html",
+  "./pages/coffrage.html",
+  "./pages/pavage.html",
+  "./pages/caniveau.html",
+  "./pages/puisard.html",
+  "./pages/regard.html",
+  "./pages/joint-carrelage.html",
+  "./pages/terrasse.html",
+  "./pages/remblai.html",
   "./assets/data/prix.json",
   "./assets/data/dosages.json",
   "./assets/data/acier.json"

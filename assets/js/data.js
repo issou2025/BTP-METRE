@@ -48,5 +48,13 @@ const CALCULATOR_LINKS = [
   { id: "plafond", title: "Plafond", desc: "Surface, plaques, ossature et accessoires.", href: "pages/plafond.html", icon: "tiles" },
   { id: "electricite", title: "Electricite", desc: "Points, cables, gaines et tableau estimatif.", href: "pages/electricite.html", icon: "calculator" },
   { id: "plomberie", title: "Plomberie", desc: "Points d'eau, tuyaux, evacuation et raccords.", href: "pages/plomberie.html", icon: "tank" },
-  { id: "menuiserie", title: "Menuiserie", desc: "Portes, fenetres, pose et budget.", href: "pages/menuiserie.html", icon: "home" }
+  { id: "menuiserie", title: "Menuiserie", desc: "Portes, fenetres, pose et budget.", href: "pages/menuiserie.html", icon: "home" },
+  { id: "coffrage", title: "Coffrage", desc: "Surface, panneaux, huile, clous et main-d'oeuvre.", href: "pages/coffrage.html", icon: "beam" },
+  { id: "pavage", title: "Pavage", desc: "Paves, lit de sable, bordures et cout.", href: "pages/pavage.html", icon: "tiles" },
+  { id: "caniveau", title: "Caniveau", desc: "Beton, pente, volume et evacuation d'eau.", href: "pages/caniveau.html", icon: "foundation" },
+  { id: "puisard", title: "Puisard", desc: "Volume, maconnerie, beton et couvercle.", href: "pages/puisard.html", icon: "tank" },
+  { id: "regard", title: "Regard beton", desc: "Dimensions, parois, radier et couvercle.", href: "pages/regard.html", icon: "slab" },
+  { id: "joint-carrelage", title: "Joints carrelage", desc: "Mortier joint, surface, largeur et budget.", href: "pages/joint-carrelage.html", icon: "tiles" },
+  { id: "terrasse", title: "Terrasse exterieure", desc: "Surface, support, finition et cout global.", href: "pages/terrasse.html", icon: "home" },
+  { id: "remblai", title: "Remblai compacte", desc: "Volume, couches, compactage et transport.", href: "pages/remblai.html", icon: "foundation" }
 ];
