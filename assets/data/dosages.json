@@ -1,0 +1,6 @@
+{
+  "150": { "usage": "Beton de proprete", "ciment_kg_m3": 150, "sable_m3_m3": 0.55, "gravier_m3_m3": 0.85 },
+  "250": { "usage": "Beton simple", "ciment_kg_m3": 250, "sable_m3_m3": 0.50, "gravier_m3_m3": 0.80 },
+  "300": { "usage": "Beton courant", "ciment_kg_m3": 300, "sable_m3_m3": 0.45, "gravier_m3_m3": 0.80 },
+  "350": { "usage": "Beton arme", "ciment_kg_m3": 350, "sable_m3_m3": 0.40, "gravier_m3_m3": 0.80 }
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metre BTP Niger : calculez vos materiaux de construction</title>
+  <meta name="description" content="Outil gratuit pour calculer ciment, sable, gravier, briques, beton, ferraillage, peinture, carrelage, dalle et cloture au Niger.">
+  <meta property="og:title" content="Metre BTP Niger">
+  <meta property="og:description" content="Calculez vos materiaux avant de construire.">
+  <meta property="og:type" content="website">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-grid-limit="8">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">M</span><span>Metre BTP Niger</span></a>
+      <button class="menu-toggle" aria-expanded="false">Menu</button>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a class="active" href="index.html">Accueil</a>
+        <a href="calculateurs.html">Calculateurs</a>
+        <a href="prix.html">Prix materiaux</a>
+        <a href="guides.html">Guides</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-secondary" href="calculateurs.html">Calculer</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Metre BTP Niger : calculez vos materiaux de construction</h1>
+          <p>Un outil simple, rapide et gratuit pour estimer vos quantites de ciment, sable, gravier, briques, beton, ferraillage, peinture, carrelage et cloture.</p>
+          <div class="hero-actions">
+            <a class="btn btn-secondary" href="calculateurs.html">Commencer un calcul</a>
+            <a class="btn btn-light" href="calculateurs.html">Voir tous les calculateurs</a>
+            <a class="btn btn-primary" href="pages/maison-complete.html">Estimer une maison</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <strong>100% statique</strong>
+          <p>Fonctionne sur telephone, tablette et ordinateur, avec vos prix personnalises.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Recherche rapide</h2>
+            <p>Trouvez le bon calculateur pour votre chantier.</p>
+          </div>
+          <input class="search-box" data-search type="search" placeholder="Rechercher beton, brique, dalle, cloture...">
+        </div>
+        <div class="grid grid-4" data-calculator-grid></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2>Pourquoi l'utiliser ?</h2></div>
+        <div class="grid">
+          <article class="info-card"><h3>Calculs rapides</h3><p>Les quantites et couts s'affichent clairement, avec les unites utiles au chantier.</p></article>
+          <article class="info-card"><h3>Prix personnalisables</h3><p>Modifiez les prix du ciment, sable, gravier, acier, briques et finitions selon votre ville.</p></article>
+          <article class="info-card"><h3>Export PDF</h3><p>Telechargez, imprimez ou partagez un resume propre sur WhatsApp.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="result-card">
+          <div class="result-head">
+            <div>
+              <p class="eyebrow">Exemple de resultat</p>
+              <h2>Dalle beton terrasse</h2>
+              <p>Dimensions : 5,00 m x 4,00 m x 0,12 m. Dosage : 350 kg/m3.</p>
+            </div>
+            <strong>109 280 FCFA</strong>
+          </div>
+          <div class="table-wrap">
+            <table><tbody>
+              <tr><th>Volume beton</th><td>2,40 m3</td></tr>
+              <tr><th>Ciment</th><td>17 sacs de 50 kg</td></tr>
+              <tr><th>Sable</th><td>0,96 m3</td></tr>
+              <tr><th>Gravier</th><td>1,92 m3</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><h3>Metre BTP Niger</h3><p>Calculez vos materiaux avant de construire.</p></div>
+      <div><h3>Liens</h3><p><a href="calculateurs.html">Calculateurs</a><br><a href="prix.html">Prix materiaux</a><br><a href="guides.html">Guides</a></p></div>
+      <div><h3>Avertissement</h3><p>Les calculs sont indicatifs et ne remplacent pas l'etude d'un professionnel qualifie.</p></div>
+    </div>
+  </footer>
+  <a class="btn whatsapp-float" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/pdf.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("service-worker.js");</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "Metre BTP Niger",
+  "short_name": "Metre BTP",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0F2A44",
+  "description": "Calculateurs de metre BTP pour beton, briques, enduit, peinture, carrelage et estimation de maison au Niger.",
+  "icons": [
+    { "src": "assets/img/logo.svg", "sizes": "128x128", "type": "image/svg+xml" }
+  ]
+}

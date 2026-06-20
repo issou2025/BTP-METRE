@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>./index.html</loc></url>
+  <url><loc>./calculateurs.html</loc></url>
+  <url><loc>./prix.html</loc></url>
+  <url><loc>./guides.html</loc></url>
+  <url><loc>./contact.html</loc></url>
+  <url><loc>./a-propos.html</loc></url>
+  <url><loc>./pages/beton.html</loc></url>
+  <url><loc>./pages/maconnerie.html</loc></url>
+  <url><loc>./pages/enduit.html</loc></url>
+  <url><loc>./pages/peinture.html</loc></url>
+  <url><loc>./pages/carrelage.html</loc></url>
+  <url><loc>./pages/fondation.html</loc></url>
+  <url><loc>./pages/dalle.html</loc></url>
+  <url><loc>./pages/poteau.html</loc></url>
+  <url><loc>./pages/poutre.html</loc></url>
+  <url><loc>./pages/ferraillage.html</loc></url>
+  <url><loc>./pages/cloture.html</loc></url>
+  <url><loc>./pages/maison-complete.html</loc></url>
+  <url><loc>./pages/toiture.html</loc></url>
+  <url><loc>./pages/fosse-septique.html</loc></url>
+  <url><loc>./pages/mortier.html</loc></url>
+  <url><loc>./pages/chape.html</loc></url>
+  <url><loc>./pages/terrassement.html</loc></url>
+  <url><loc>./pages/escalier.html</loc></url>
+  <url><loc>./pages/plafond.html</loc></url>
+  <url><loc>./pages/electricite.html</loc></url>
+  <url><loc>./pages/plomberie.html</loc></url>
+  <url><loc>./pages/menuiserie.html</loc></url>
+</urlset>

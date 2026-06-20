@@ -1,0 +1,17 @@
+{
+  "eau_litre_m3": 175,
+  "mortier_maconnerie_m3_m2": 0.025,
+  "rendement_enduit_sable": 1.1,
+  "briques_par_m2": {
+    "10": 12,
+    "12": 11,
+    "15": 10,
+    "20": 9
+  },
+  "standing_maison": {
+    "economique": { "gros": 90000, "second": 45000, "finition": 35000 },
+    "standard": { "gros": 120000, "second": 65000, "finition": 55000 },
+    "moyen": { "gros": 160000, "second": 85000, "finition": 85000 },
+    "haut": { "gros": 220000, "second": 130000, "finition": 150000 }
+  }
+}

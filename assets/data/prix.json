@@ -1,0 +1,12 @@
+{
+  "ciment_sac_50kg": 4000,
+  "sable_m3": 3000,
+  "gravier_m3": 20000,
+  "acier_kg": 450,
+  "brique_unite": 125,
+  "carrelage_m2": 6000,
+  "peinture_20l": 35000,
+  "main_oeuvre_jour": 5000,
+  "tole_unite": 6000,
+  "bois_charpente": 250000
+}
