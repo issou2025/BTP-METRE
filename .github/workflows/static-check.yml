@@ -21,8 +21,10 @@ jobs:
           test -f manifest.json
           test -f service-worker.js
           test -f assets/css/style.css
+          test -f assets/css/modern.css
           test -f assets/js/main.js
           test -f assets/js/data.js
+          test -f assets/js/storage.js
           test -f assets/js/projects.js
           test -f sitemap.xml
           test -f robots.txt
@@ -36,3 +38,5 @@ jobs:
           grep -q "contact.html" index.html
           grep -q "data-calculator-grid" calculateurs.html
           grep -q "data-project-app" projets.html
+          grep -q "modern.css" assets/js/storage.js
+          grep -q "modern.css" service-worker.js
