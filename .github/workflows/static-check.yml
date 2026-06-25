@@ -17,18 +17,22 @@ jobs:
         run: |
           test -f index.html
           test -f calculateurs.html
+          test -f projets.html
           test -f manifest.json
           test -f service-worker.js
           test -f assets/css/style.css
           test -f assets/js/main.js
           test -f assets/js/data.js
+          test -f assets/js/projects.js
           test -f sitemap.xml
           test -f robots.txt
 
       - name: Check important links
         run: |
           grep -q "calculateurs.html" index.html
+          grep -q "projets.html" index.html
           grep -q "prix.html" index.html
           grep -q "guides.html" index.html
           grep -q "contact.html" index.html
           grep -q "data-calculator-grid" calculateurs.html
+          grep -q "data-project-app" projets.html
