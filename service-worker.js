@@ -1,8 +1,9 @@
-const CACHE_NAME = "metre-btp-niger-v8";
+const CACHE_NAME = "metre-btp-niger-v9";
 const ASSETS = [
   "./",
   "./index.html",
   "./calculateurs.html",
+  "./projets.html",
   "./prix.html",
   "./guides.html",
   "./contact.html",
@@ -15,6 +16,7 @@ const ASSETS = [
   "./assets/js/data.js",
   "./assets/js/storage.js",
   "./assets/js/pdf.js",
+  "./assets/js/projects.js",
   "./assets/js/beton.js",
   "./assets/js/maconnerie.js",
   "./assets/js/enduit.js",
