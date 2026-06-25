@@ -1,12 +1,20 @@
 {
   "name": "Metre BTP Niger",
   "short_name": "Metre BTP",
+  "description": "Calculateurs de metre BTP pour beton, briques, enduit, peinture, carrelage, fondations, ferraillage et estimation de maison au Niger.",
+  "id": "./index.html",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "fr",
   "background_color": "#F8FAFC",
   "theme_color": "#0F2A44",
-  "description": "Calculateurs de metre BTP pour beton, briques, enduit, peinture, carrelage et estimation de maison au Niger.",
   "icons": [
-    { "src": "assets/img/logo.svg", "sizes": "128x128", "type": "image/svg+xml" }
+    {
+      "src": "assets/img/logo.svg",
+      "sizes": "128x128",
+      "type": "image/svg+xml"
+    }
   ]
 }
