@@ -1,5 +1,6 @@
 const PROJECT_KEY = "metreBtpNigerProjects";
 const ACTIVE_PROJECT_KEY = "metreBtpNigerActiveProject";
+const NEW_PROJECT_ID = "__new_project__";
 
 function projectMoney(value) {
   return new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(Math.round(Number(value || 0))) + " FCFA";
@@ -30,12 +31,14 @@ function activeProjectId() {
 }
 
 function setActiveProject(id) {
-  if (id) localStorage.setItem(ACTIVE_PROJECT_KEY, id);
+  localStorage.setItem(ACTIVE_PROJECT_KEY, id || NEW_PROJECT_ID);
 }
 
 function getActiveProject() {
+  const activeId = activeProjectId();
+  if (activeId === NEW_PROJECT_ID) return null;
   const projects = loadProjects();
-  return projects.find((project) => project.id === activeProjectId()) || projects[0] || null;
+  return projects.find((project) => project.id === activeId) || projects[0] || null;
 }
 
 function updateProject(nextProject) {
@@ -101,6 +104,28 @@ function projectToCsv(project) {
   return rows.map((row) => row.map((cell) => `"${String(cell ?? "").replace(/"/g, '""')}"`).join(";")).join("\n");
 }
 
+function renderProjectList(activeProject) {
+  const list = document.querySelector("[data-project-list]");
+  if (!list) return;
+  const projects = loadProjects();
+  if (!projects.length) {
+    list.innerHTML = `<article class="info-card"><h3>Aucun projet</h3><p>Créez votre premier projet pour commencer un devis global.</p></article>`;
+    return;
+  }
+  list.innerHTML = projects.map((project) => {
+    const isActive = activeProject && activeProject.id === project.id;
+    return `<article class="info-card"><h3>${project.name}</h3><p>${project.type || "Projet"} - ${project.city || "Ville"} - ${project.items?.length || 0} ligne(s)</p><p><strong>${projectMoney(projectGrandTotal(project))}</strong></p><button class="btn ${isActive ? "btn-secondary" : "btn-light"}" type="button" data-open-project="${project.id}">${isActive ? "Ouvert" : "Ouvrir"}</button></article>`;
+  }).join("");
+}
+
+function clearProjectForm(form) {
+  if (!form) return;
+  form.reset();
+  form.city.value = "Niamey";
+  form.type.value = "Maison";
+  form.margin.value = 10;
+}
+
 function renderProjects() {
   const app = document.querySelector("[data-project-app]");
   if (!app) return;
@@ -121,10 +146,12 @@ function renderProjects() {
     form.type.value = project.type || "Maison";
     form.surface.value = project.surface || "";
     form.margin.value = project.margin ?? 10;
+  } else {
+    clearProjectForm(form);
   }
 
-  if (title) title.textContent = project ? project.name : "Aucun projet";
-  if (meta) meta.textContent = project ? `${project.type || "Projet"} - ${project.city || "Ville non définie"} - ${project.items?.length || 0} ligne(s)` : "Créez un projet pour commencer.";
+  if (title) title.textContent = project ? project.name : "Nouveau projet";
+  if (meta) meta.textContent = project ? `${project.type || "Projet"} - ${project.city || "Ville non définie"} - ${project.items?.length || 0} ligne(s)` : "Remplissez le formulaire puis enregistrez.";
   if (activeTotal) activeTotal.textContent = project ? projectMoney(projectGrandTotal(project)) : "0 FCFA";
   if (grandTotal) grandTotal.textContent = project ? projectMoney(projectGrandTotal(project)) : "0 FCFA";
 
@@ -151,6 +178,7 @@ function renderProjects() {
   }
 
   if (lineForm) lineForm.hidden = !project;
+  renderProjectList(project);
 }
 
 function setupProjects() {
@@ -209,12 +237,13 @@ function setupProjects() {
     const project = getActiveProject();
 
     if (target.matches("[data-new-project]")) {
-      localStorage.removeItem(ACTIVE_PROJECT_KEY);
-      form?.reset();
-      if (form) {
-        form.city.value = "Niamey";
-        form.margin.value = 10;
-      }
+      setActiveProject(NEW_PROJECT_ID);
+      clearProjectForm(form);
+      renderProjects();
+    }
+
+    if (target.matches("[data-open-project]")) {
+      setActiveProject(target.dataset.openProject);
       renderProjects();
     }
 
@@ -230,7 +259,7 @@ function setupProjects() {
       const projects = loadProjects().filter((item) => item.id !== project.id);
       saveProjects(projects);
       if (projects[0]) setActiveProject(projects[0].id);
-      else localStorage.removeItem(ACTIVE_PROJECT_KEY);
+      else setActiveProject(NEW_PROJECT_ID);
       renderProjects();
       showAlert("Projet supprimé.");
     }
