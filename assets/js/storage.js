@@ -1,3 +1,16 @@
+(function loadModernTheme() {
+  if (document.querySelector('link[data-modern-theme]')) return;
+  const script = document.currentScript;
+  const href = script && script.src
+    ? script.src.replace('/js/storage.js', '/css/modern.css')
+    : (location.pathname.includes('/pages/') ? '../assets/css/modern.css' : 'assets/css/modern.css');
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = href;
+  link.dataset.modernTheme = 'true';
+  document.head.appendChild(link);
+})();
+
 const PRICE_KEY = "metreBtpNigerPrices";
 const FAVORITE_KEY = "metreBtpNigerFavorites";
 const RECENT_KEY = "metreBtpNigerRecent";
