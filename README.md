@@ -1,6 +1,6 @@
 # Métré BTP Niger
 
-Métré BTP Niger est un site statique HTML, CSS et JavaScript pur pour préparer des avant-métrés et estimations rapides de matériaux BTP.
+Métré BTP Niger est un site statique HTML, CSS et JavaScript pur pour préparer des avant-métrés, estimations rapides et devis indicatifs de matériaux BTP.
 
 Le site aide à calculer les quantités de béton, ciment, sable, gravier, briques, enduit, peinture, carrelage, dalle, fondation, poteaux, poutres, ferraillage, toiture, clôture, terrassement, plomberie, électricité, menuiserie et estimation globale de maison.
 
@@ -14,6 +14,16 @@ Le site aide à calculer les quantités de béton, ciment, sable, gravier, briqu
 - Export, impression et partage des résultats.
 - Manifest PWA et service worker pour une utilisation plus rapide.
 - Sitemap et robots.txt pour le référencement.
+- Module Projets pour créer un devis global.
+- Export CSV compatible Excel.
+- Import et export JSON pour sauvegarder les projets.
+- Sous-totaux par lot : gros œuvre, second œuvre, finitions, main-d’œuvre, transport, études et autres.
+
+## Module Projets et Devis
+
+La page `projets.html` permet de créer un projet complet, d’ajouter des lignes de devis, de calculer les montants, de gérer une marge ou des imprévus, de copier le résumé, d’imprimer, de partager, d’exporter en CSV et de sauvegarder les données en JSON.
+
+Cette page transforme les calculateurs séparés en un outil de préparation de devis plus professionnel.
 
 ## Publication GitHub Pages
 
@@ -54,5 +64,5 @@ Les résultats sont indicatifs. Ils ne remplacent pas une étude technique, un p
 - Ajouter un vrai numéro WhatsApp.
 - Ajouter des icônes PWA PNG en 192x192 et 512x512.
 - Ajouter une page confidentialité si le site collecte des demandes client.
-- Ajouter des tests automatiques pour vérifier les liens internes.
 - Ajouter progressivement des guides SEO pour chaque calculateur.
+- Ajouter un bouton pour envoyer directement les résultats d’un calculateur vers le devis global.
