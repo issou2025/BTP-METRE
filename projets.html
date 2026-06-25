@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projets et devis BTP - Métré BTP Niger</title>
+  <meta name="description" content="Créez un projet BTP, ajoutez des lignes de devis, calculez les sous-totaux, exportez en CSV ou JSON et imprimez une fiche professionnelle.">
+  <meta name="theme-color" content="#0F2A44">
+  <meta property="og:title" content="Projets et devis - Métré BTP Niger">
+  <meta property="og:description" content="Tableau de bord projet, devis global, export CSV, import JSON, impression et partage.">
+  <meta property="og:type" content="website">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">M</span><span>Métré BTP Niger</span></a>
+      <button class="menu-toggle" aria-expanded="false">Menu</button>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="calculateurs.html">Calculateurs</a>
+        <a class="active" href="projets.html">Projets</a>
+        <a href="prix.html">Prix matériaux</a>
+        <a href="guides.html">Guides</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-secondary" href="calculateurs.html">Calculer</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <p class="eyebrow">Nouveau module professionnel</p>
+        <h1>Projets, devis global et export</h1>
+        <p>Créez un projet, ajoutez des lignes de métré, calculez les sous-totaux par lot, exportez en CSV/JSON, copiez, imprimez ou partagez le devis.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container calc-layout" data-project-app>
+        <form class="calc-form" data-project-form>
+          <h2>Créer ou modifier un projet</h2>
+          <label>Nom du projet<input name="name" required placeholder="Exemple : Maison 3 chambres Niamey"></label>
+          <label>Client<input name="client" placeholder="Nom du client"></label>
+          <label>Ville<input name="city" value="Niamey"></label>
+          <label>Type de projet<select name="type"><option>Maison</option><option>Mur de clôture</option><option>R+1</option><option>R+2</option><option>Boutique</option><option>Hangar</option><option>Autre</option></select></label>
+          <label>Surface indicative (m2)<input name="surface" type="number" min="0" step="0.01" placeholder="120"></label>
+          <label>Marge / imprévus (%)<input name="margin" type="number" min="0" step="0.5" value="10"></label>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Enregistrer le projet</button>
+            <button class="btn btn-light" type="button" data-new-project>Nouveau</button>
+          </div>
+        </form>
+
+        <aside class="result-card">
+          <div class="result-head">
+            <div>
+              <p class="eyebrow">Projet actif</p>
+              <h2 data-active-title>Aucun projet</h2>
+              <p data-active-meta>Créez un projet pour commencer.</p>
+            </div>
+            <strong data-active-total>0 FCFA</strong>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-secondary" type="button" data-copy-project>Copier</button>
+            <button class="btn btn-light" type="button" data-print-project>Imprimer</button>
+            <button class="btn btn-light" type="button" data-share-project>Partager</button>
+          </div>
+        </aside>
+
+        <section class="calc-form" style="grid-column:1/-1">
+          <div class="section-head">
+            <div>
+              <h2>Lignes de devis</h2>
+              <p>Ajoutez les quantités calculées : matériaux, main-d’œuvre, transport, marge entrepreneur, finitions et autres postes.</p>
+            </div>
+          </div>
+          <form data-line-form class="grid" style="grid-template-columns:repeat(6,minmax(0,1fr));align-items:end">
+            <label>Lot<select name="lot"><option>Gros œuvre</option><option>Second œuvre</option><option>Finitions</option><option>Main-d’œuvre</option><option>Transport</option><option>Études</option><option>Autres</option></select></label>
+            <label style="grid-column:span 2">Désignation<input name="designation" required placeholder="Béton fondation, briques, transport..."></label>
+            <label>Unité<input name="unit" value="u"></label>
+            <label>Quantité<input name="qty" type="number" min="0" step="0.001" required value="1"></label>
+            <label>Prix unitaire<input name="unitPrice" type="number" min="0" step="1" required value="0"></label>
+            <button class="btn btn-primary" type="submit">Ajouter</button>
+          </form>
+          <div class="form-actions">
+            <button class="btn btn-secondary" type="button" data-export-csv>Exporter CSV / Excel</button>
+            <button class="btn btn-light" type="button" data-export-json>Exporter JSON</button>
+            <label class="btn btn-light" style="cursor:pointer">Importer JSON<input data-import-json type="file" accept="application/json" hidden></label>
+            <button class="btn btn-light" type="button" data-delete-project>Supprimer projet</button>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>Lot</th><th>Désignation</th><th>Qté</th><th>U</th><th>PU</th><th>Montant</th><th></th></tr></thead><tbody data-lines></tbody></table></div>
+        </section>
+
+        <section class="result-card" style="grid-column:1/-1" data-summary-card>
+          <div class="result-head"><div><p class="eyebrow">Synthèse</p><h2>Récapitulatif par lot</h2></div><strong data-grand-total>0 FCFA</strong></div>
+          <div class="table-wrap"><table><tbody data-lot-summary></tbody></table></div>
+          <p class="muted">Les résultats sont indicatifs et doivent être vérifiés selon les prix réels, les plans, les conditions de chantier et les études techniques.</p>
+        </section>
+
+        <section class="info-card" style="grid-column:1/-1">
+          <h2>Fonctions ajoutées dans ce module</h2>
+          <p>Tableau de bord projet, devis global, sous-totaux par lot, main-d’œuvre, transport, marge ou imprévus, export CSV compatible Excel, import/export JSON, impression, copie et partage.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><p>Métré BTP Niger - Développeur : bacseried@gmail.com</p></div></footer>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/projects.js"></script>
+</body>
+</html>
