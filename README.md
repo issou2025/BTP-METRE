@@ -41,6 +41,10 @@ Puis ouvrir :
 http://localhost:8000
 ```
 
+## Développeur
+
+Email du développeur : `bacseried@gmail.com`
+
 ## Avertissement technique
 
 Les résultats sont indicatifs. Ils ne remplacent pas une étude technique, un plan d’exécution ou un devis professionnel adapté au chantier. Pour les ouvrages porteurs, une vérification par un professionnel qualifié reste nécessaire.
