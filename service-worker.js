@@ -1,4 +1,4 @@
-const CACHE_NAME = "metre-btp-niger-v9";
+const CACHE_NAME = "metre-btp-niger-v10";
 const ASSETS = [
   "./",
   "./index.html",
@@ -12,6 +12,7 @@ const ASSETS = [
   "./offline.html",
   "./manifest.json",
   "./assets/css/style.css",
+  "./assets/css/modern.css",
   "./assets/js/main.js",
   "./assets/js/data.js",
   "./assets/js/storage.js",
